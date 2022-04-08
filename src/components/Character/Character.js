@@ -1,20 +1,19 @@
 import PropTypes from "prop-types"
-import { Col, Card, Button } from "react-bootstrap";
+//import { Col, Card, Button } from "react-bootstrap";
 
-const Character = ({ character }) => {
+const Character = ({ image, name, species, status }) => {
     return (
-        <Col md={4} sm={12}>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={character.image} />
-                <Card.Body>
-                    <Card.Title>{character.name}</Card.Title>
-                    <Card.Text>
-                        Specie : {character.species}
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-            </Card>
-        </Col>
+        <div className="character">
+            <div className="container-image">
+                <img src={image} alt=""/>
+            </div>
+            <div className="container-description">
+                <h2 className="title">{name}</h2>
+                <p>Specie : {species}</p>
+                <p>Estatus : {status}</p>
+                {/*<button>Go</button> */}
+            </div>
+        </div>
     )
 }
 

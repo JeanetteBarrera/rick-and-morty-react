@@ -1,5 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Rubik+Wet+Paint&display=swap');
+@import url('./components/Character/Character.scss');
+@import url('./components/Characters/Characters.scss');
+@import url('./components/Header/Header.scss');
+
+/*
+font-family: 'Roboto Mono', monospace;
+font-family: 'Rubik Wet Paint', cursive;
+*/
+
 * {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 100%;
+}
+div.app {
+  width: 100%;
+  margin: 0;
+  min-width: 350px;
+  /*background-color: #19212C;*/
+  background-color: white;
+}
+.app .header {
+  width: 100%;
+  background-color: green;
+}
+.app .characters {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .character {
+    width: 90%;
+    margin: 1rem auto;
+    border: solid 1px gray;
+    border-radius: 30px;
+    background-color: rgb(34, 34, 34);
+    box-shadow: 0 1px 15px rgba(0,0,0,0.5);
+
+    .container-image {
+      width: 100%;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+    }
+
+    .container-description {
+      padding: 1rem;
+      border-radius: 30px;
+
+      .title {
+        font-size: 2rem;
+        margin: 0;
+        color: rgb(211, 211, 211);
+        font-weight: 700;
+        font-family: 'Roboto Mono', monospace;
+      }
+      p {
+        margin: 0;
+        color: rgb(54, 172, 0);
+        font-weight: 300;
+        font-size: 1.5rem;
+        font-family:'Rubik Wet Paint', cursive;
+
+      }
+      button {
+        width: 50%;
+        background-color: rgb(0, 0, 95);
+        padding: .5rem;
+        color: rgb(211, 211, 211);
+        font-size: 2rem;
+      }
+    }
+    @media (min-width: 500px) {
+      width: 45%;
+    }
+    @media (min-width: 767px) {
+      width: 30%;
+    }
+    @media (min-width: 1200px) {
+      width: 23%;
+    }
+
+  }
+  
 }

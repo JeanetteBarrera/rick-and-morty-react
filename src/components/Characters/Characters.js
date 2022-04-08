@@ -1,4 +1,4 @@
-import { Row } from "react-bootstrap"
+//import { Row } from "react-bootstrap"
 import Character from "../Character/Character"
 
 const Characters = ({ characters }) => {
@@ -8,12 +8,12 @@ const Characters = ({ characters }) => {
 
     return (
 
-        <Row className="justify-content-center">
+        <section className="characters">
             {
                 characters?.length > 0 && 
-                characters.map((character) => <Character key={character.id} character={character} /> )
+                characters.map((character) => <Character key={character.id} {...character} /> )
             }
-        </Row>
+        </section>
     )
 }
 
