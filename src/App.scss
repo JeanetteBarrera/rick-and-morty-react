@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Rubik+Wet+Paint&display=swap');
 @import url('./components/Character/Character.scss');
 @import url('./components/Characters/Characters.scss');
-@import url('./components/Header/Header.scss');
+@import url('./components/Home/Home.scss');
 
 /*
 font-family: 'Roboto Mono', monospace;
@@ -23,12 +23,58 @@ div.app {
   width: 100%;
   margin: 0;
   min-width: 350px;
+  position: relative;
   /*background-color: #19212C;*/
-  background-color: white;
+  background-color: #24282F;
+}
+.app .home {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  max-height: 900px;
+
+  .container-image {
+    width: 100%;
+    max-height: 750px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: .6;
+    }
+  }
+  .contain {
+    width: 90%;
+    margin: 4rem auto ;
+
+    h1 {
+      font-size: 5rem;
+      color: white;
+      font-family: 'Rubik Wet Paint', cursive;
+    }
+  }
+  
 }
 .app .header {
   width: 100%;
   background-color: green;
+}
+.app .search {
+  width: 90%;
+  margin: 0 auto;
+
+  .container-input {
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 1rem 3rem;
+      font-size: 1.5rem;
+      color: gray;
+    }
+  }
+
 }
 .app .characters {
   width: 90%;
@@ -42,7 +88,7 @@ div.app {
     margin: 1rem auto;
     border: solid 1px gray;
     border-radius: 30px;
-    background-color: rgb(34, 34, 34);
+    background-color: #3C3E44;
     box-shadow: 0 1px 15px rgba(0,0,0,0.5);
 
     .container-image {
@@ -59,7 +105,7 @@ div.app {
     }
 
     .container-description {
-      padding: 1rem;
+      padding: 1rem 1.8rem;
       border-radius: 30px;
 
       .title {
@@ -89,10 +135,10 @@ div.app {
       width: 45%;
     }
     @media (min-width: 767px) {
-      width: 30%;
+      width: 23%;
     }
     @media (min-width: 1200px) {
-      width: 23%;
+      width: 18%;
     }
 
   }

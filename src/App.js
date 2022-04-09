@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.scss';
+import Home from './components/Home/Home'
 import Characters from './components/Characters/Characters';
 import { useFetch } from './hooks/useFetch'
 import Loading from './components/common/Loading';
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className="app">
+      <Home />
       <Search findCharacter={findCharacter}/>
       <Characters characters={characters} /> 
     </div>

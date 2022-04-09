@@ -11,7 +11,7 @@ const Search = ({findCharacter}) => {
     }
 
     return(
-        <form className='' onSubmit={getCharacters}>
+        <form className='search' onSubmit={getCharacters}>
             <div className='container-input'> 
                 <input
                     name='keyworks'
